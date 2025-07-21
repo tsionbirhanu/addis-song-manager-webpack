@@ -61,16 +61,23 @@ Edit
 npm test
 🔌 API Endpoints (Mocked with MirageJS)
 Method	Endpoint	Description
+
 GET	/api/songs	Fetch all songs (paginated)
+
 GET	/api/songs/:id	Get a specific song by ID
+
 POST	/api/songs	Create a new song
+
 PUT	/api/songs/:id	Update song details
+
 DELETE	/api/songs/:id	Delete a song
 
-⚙️ Webpack Configuration (No CRA)
+ ## ⚙️ Webpack Configuration (No CRA)
+
 This project is built without Create React App and uses a manual Webpack setup for complete control over the build process.
 
-🔧 Key Webpack Features
+## 🔧 Key Webpack Features
+
 Entry Point: src/index.tsx
 
 Output: dist folder with hashed bundle
@@ -89,7 +96,8 @@ Environment Variables: Handled via dotenv-webpack
 
 Extensions: Supports .ts, .tsx, .js, .jsx
 
-🧪 How I Verified the Webpack Config
+## 🧪 How I Verified the Webpack Config
+
 Ran npm start and confirmed the app builds and runs correctly
 
 Verified dynamic reloading works during development
@@ -98,7 +106,8 @@ Built the app with npm run build and tested dist/index.html
 
 Inspected bundled files for correct asset inclusion
 
-🤖 AI Usage & Code Verification
+## 🤖 AI Usage & Code Verification
+
 ✅ Tools Used
 ChatGPT and GitHub Copilot were used for:
 
@@ -110,7 +119,8 @@ Writing regex and filtering logic
 
 Refactoring suggestions
 
-🧠 What I Did Myself
+## 🧠 What I Did Myself
+
 💡 Every line of code was read, understood, and adjusted by me before submission.
 
 Modified and customized all AI-generated snippets
@@ -121,7 +131,8 @@ Used console.log debugging and React DevTools
 
 Wrote and ran unit tests for components and reducers
 
-🧪 Testing Strategy
+## 🧪 Testing Strategy
+
 Tests are located in:
 
 bash
@@ -142,6 +153,7 @@ Redux actions and reducers
 
 Basic integration flows (e.g., form submission)
 
-👤 Author
+## 👤 Author
+
 Tsion Birhanu
 Frontend Developer | Software Engineering Student
