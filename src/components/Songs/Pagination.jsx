@@ -2,7 +2,7 @@
 import styled from "@emotion/styled"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import Button from "../UI/Button"
-import React from "react";
+import React from "react"
 
 const PaginationContainer = styled.div`
   display: flex;

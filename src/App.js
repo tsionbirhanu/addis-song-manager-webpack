@@ -1,26 +1,25 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom"
-import { ThemeProvider } from "@emotion/react"
-import { theme } from "./styles/theme"
-import Layout from "./components/Layout/Layout"
-import SongList from "./pages/SongList"
-import AddSong from "./pages/AddSong"
-import EditSong from "./pages/EditSong"
-import { GlobalStyles } from "./styles/GlobalStyles"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { Suspense, lazy } from "react";
+import Layout from "./components/Layout/Layout";
+
+const SongListPage = lazy(() => import("./pages/SongList"));
+const AddSong = lazy(() => import("./pages/AddSong"));
+const EditSong = lazy(() => import("./pages/EditSong"));
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
+    <BrowserRouter>
       <Layout>
-        <Routes>
-          <Route path="/" element={<SongList />} />
-          <Route path="/add" element={<AddSong />} />
-          <Route path="/edit/:id" element={<EditSong />} />
-        </Routes>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<SongListPage />} />
+            <Route path="/add" element={<AddSong />} />
+            <Route path="/edit/:id" element={<EditSong />} />
+          </Routes>
+        </Suspense>
       </Layout>
-    </ThemeProvider>
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

@@ -40,12 +40,13 @@ const HeaderActions = styled.div`
   display: flex;
   align-items: center;
   gap: ${(props) => props.theme.spacing.md};
-  
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     flex-direction: column;
     align-items: stretch;
   }
 `
+
+
 
 const SongListPage = () => {
   const dispatch = useDispatch()
