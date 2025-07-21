@@ -1,6 +1,3 @@
-Here’s a **more interactive, visually attractive, and well-structured version** of your `README.md`, with proper spacing, consistent sections, and animated-like feel (using emojis + layout) — **without using `<details>` or `</>`**.
-
----
 
 # 🎵 Addis Song Manager
 
@@ -63,10 +60,10 @@ npm run build
 | Method | Endpoint        | Description         |
 | ------ | --------------- | ------------------- |
 | GET    | /api/songs      | Fetch all songs     |
-| GET    | /api/songs/\:id | Fetch a single song |
+| GET    | /api/songs/:id  | Fetch a single song |
 | POST   | /api/songs      | Add a new song      |
-| PUT    | /api/songs/\:id | Update a song       |
-| DELETE | /api/songs/\:id | Delete a song       |
+| PUT    | /api/songs/:id  | Update a song       |
+| DELETE | /api/songs/:id  | Delete a song       |
 
 ⚠️ **Note**: All endpoints are mocked using MirageJS (see `src/mirage/server.js`)
 
@@ -101,7 +98,7 @@ This project uses a **custom Webpack config** (not CRA) for full control.
 
 * ChatGPT & GitHub Copilot for:
 
-  * Boilerplate generation (Redux, Webpack)
+  * Generating boilerplate (Redux setup, Webpack configuration)
   * Regex, filtering logic
   * Debug help & refactoring
 
