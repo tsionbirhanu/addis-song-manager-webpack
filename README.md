@@ -5,18 +5,29 @@ It features CRUD operations, global state management, dynamic theming, and a ful
 
 🚀 Features
 ✅ Paginated list of songs (title, artist, album, year, genre, duration)
+
 ✅ Add, edit, and delete songs (CRUD)
+
 ✅ Search and filter functionality
+
 ✅ Fully responsive UI
+
 ✅ State management using Redux Toolkit + Redux-Saga
+
 ✅ Styled with Emotion (CSS-in-JS)
+
 ✅ Mock backend powered by MirageJS
+
 ✅ Manual Webpack setup (no CRA)
+
 ✅ Component and logic testing using Jest & React Testing Library
+
 ✅ Code-splitting with React.lazy()
+
 ✅ Unit & component testing with Jest
 
-<details> <summary><strong>📦 Tech Stack</strong></summary>
+📦 Tech Stack
+<details> <summary><strong>Click to view</strong></summary>
 Frontend: React, Redux Toolkit, Redux-Saga, Emotion, Framer Motion
 
 Backend API: MirageJS (Mock Server)
@@ -29,7 +40,7 @@ Bundler: Custom Webpack configuration (no CRA)
 
 </details>
 🛠️ Getting Started
-<details> <summary><strong>📥 Installation & Running</strong></summary>
+<details> <summary><strong>Installation & Running</strong></summary>
 bash
 Copy
 Edit
@@ -43,7 +54,7 @@ npm install
 # Start the development server
 npm start
 
-# Navigate to: 
+# Open your browser and navigate to:
 http://localhost:3000
 
 # Run tests
@@ -53,25 +64,23 @@ npm test
 npm run build
 </details>
 📡 API Endpoints
-<details> <summary><strong>🔌 REST API Documentation (MirageJS)</strong></summary>
+<details> <summary><strong>MirageJS Mock API</strong></summary>
 Method	Endpoint	Description
-GET	/api/songs	Fetch all songs (pagination + search)
+GET	/api/songs	Fetch all songs
 GET	/api/songs/:id	Get a single song
 POST	/api/songs	Add a new song
 PUT	/api/songs/:id	Update an existing song
 DELETE	/api/songs/:id	Delete a song
 
-⚠️ These endpoints are mocked using MirageJS
-Source: src/mirage/server.js
+⚠️ These endpoints are mocked using MirageJS (see src/mirage/server.js)
 
 </details>
-**⚙️ Webpack Configuration (No CRA)**
+⚙️ Webpack Configuration (No CRA)
+This project uses a manual Webpack setup for full control.
 
-This project is built without Create React App and uses a manual Webpack setup for complete control over the build process.
+Key Features:
 
-🔧 Key Webpack Features
-
-JSX & TypeScript support via Babel
+JSX & TypeScript via Babel
 
 Hot Module Replacement (HMR)
 
@@ -81,75 +90,61 @@ dotenv-webpack for environment variables
 
 Code splitting & lazy loading
 
-Optimized production bundle via TerserPlugin
+Optimized production bundle (TerserPlugin)
 
-🧪 How I Verified the Webpack Config
+Verification:
 
-✅ Ran npm start and confirmed app builds and runs
+✅ npm start confirms successful build & dev run
 
-✅ Verified dynamic reloading works during development
+✅ Verified dynamic reloading during development
 
-✅ Built with npm run build and tested dist/index.html
+✅ npm run build works; tested dist/index.html
 
-✅ Inspected bundled files for correct asset inclusion
+✅ Bundled files include correct assets
 
-**🤖 AI Usage & Code Verification**
+🤖 AI Usage & Code Verification
+Tools Used:
+ChatGPT & GitHub Copilot for:
 
-✅ Tools Used
-ChatGPT and GitHub Copilot for:
+Boilerplate (Redux store, Webpack config)
 
-Boilerplate generation (Redux store, Webpack config)
+Debugging help
 
-Debugging assistance
-
-Writing regex & filtering logic
+Regex & logic generation
 
 Refactoring suggestions
 
-🧠 What I Did Myself
-💡 Every line of code was read, understood, and adjusted before submission
+What I Did Myself:
 
-Modified and customized all AI-generated snippets
+💡 Reviewed and adjusted every AI-generated snippet
 
-Verified all logic by manual testing in browser
+✅ Manually tested all logic in browser
 
-Used console.log debugging and React DevTools
+✅ Used console.log and React DevTools for debugging
 
-Wrote and ran unit tests for components and reducers
+✅ Wrote unit tests for components & reducers
 
-**🧬 Testing Strategy**
+🧪 Testing Strategy
+<details> <summary><strong>Tests & Verification</strong></summary>
+📁 Tests in: src/__tests__/components/
 
-<details> <summary><strong>🧪 Tests & Verification</strong></summary>
-Written using Jest + React Testing Library
-Located in: src/__tests__/components/
+✅ Render & interaction tests (clicks, inputs, submissions)
 
-Covers:
-✅ Component rendering
+✅ Redux logic covered
 
-✅ User interactions (clicks, input, form submission)
+✅ Ran with npm test
 
-✅ Redux logic
+✅ Manual browser testing
 
-Run with:
-bash
-Copy
-Edit
-npm test
-✅ Also tested manually in browser
-✅ Verified API mocking with MirageJS
-✅ Redux DevTools used to confirm state flow
+✅ Verified API mocks (MirageJS)
+
+✅ Used Redux DevTools for state validation
 
 </details>
+📸 Preview Screenshots
+Vercel deployment is currently being fixed. Here's a preview of the working app:
 
-**📸 Preview Screenshot**
-
-vercel deployment is currently being fixed. Here's a preview of the working app:
-<img width="1854" height="824" alt="image" src="https://github.com/user-attachments/assets/d0d9c0ed-7191-4f2a-8a20-d689b134592c" />
-<img width="1857" height="820" alt="image" src="https://github.com/user-attachments/assets/92601f50-dd94-4cba-8b04-5e9bfb25ef8d" />
-<img width="1861" height="817" alt="image" src="https://github.com/user-attachments/assets/6b20a7fc-af4b-437c-bb1c-e54bfa16d072" />
-<img width="1851" height="845" alt="image" src="https://github.com/user-attachments/assets/5807def8-e392-4d3c-b3ed-d29b713de130" />
-
-**👤 Author**
+<img width="1854" height="824" alt="image" src="https://github.com/user-attachments/assets/d0d9c0ed-7191-4f2a-8a20-d689b134592c" /> <img width="1857" height="820" alt="image" src="https://github.com/user-attachments/assets/92601f50-dd94-4cba-8b04-5e9bfb25ef8d" /> <img width="1861" height="817" alt="image" src="https://github.com/user-attachments/assets/6b20a7fc-af4b-437c-bb1c-e54bfa16d072" /> <img width="1851" height="845" alt="image" src="https://github.com/user-attachments/assets/5807def8-e392-4d3c-b3ed-d29b713de130" />
+👤 Author
 Tsion Birhanu
 📧 tsionbirhanu08@gmail.com
-
