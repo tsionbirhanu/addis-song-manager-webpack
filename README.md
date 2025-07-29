@@ -1,147 +1,118 @@
-# 🎵 Addis Song Manager
+🎵 Addis Song Manager
+A full-stack React application to manage songs — built for the Addis Software Internship Test Project.
 
-> A full-stack React app to manage songs — built for the **Addis Software Internship Test Project**.
+A fully responsive song manager with CRUD functionality, global state, search & filter, and a custom Webpack setup (no CRA).
 
-It includes powerful CRUD features, global state, dynamic theming, and a fully **custom Webpack setup** (no CRA). 
+🚀 Features
+🎶 Paginated song list (title, artist, album, year, genre, duration)
 
----
+➕ Add, ✏️ Edit, 🗑️ Delete songs (CRUD)
 
-## 🚀 Features
+🔍 Search & Filter by title, artist, album, and genre
 
-* ✅ Paginated list of songs *(title, artist, album, year, genre, duration)*
-* ✅ Add, Edit, Delete songs *(CRUD)*
-* ✅ Search & Filter functionality
-* ✅ Fully responsive UI
-* ✅ State management with **Redux Toolkit + Redux-Saga**
-* ✅ Styled using **Emotion (CSS-in-JS)**
-* ✅ **Mock Backend** with MirageJS
-* ✅ Manual Webpack Setup *(no Create React App)*
-* ✅ Component + Logic Testing using **Jest & React Testing Library**
-* ✅ Code-splitting with `React.lazy()`
+📱 Responsive design for mobile and desktop
 
----
+🌍 Global state using Redux Toolkit + Redux-Saga
 
-## 📦 Tech Stack
+🎨 Styled with Emotion (CSS-in-JS)
 
-**Frontend**: React, Redux Toolkit, Redux-Saga, Emotion, Framer Motion  
-**Backend**: MirageJS (Mock Server)  
-**Icons**: Lucide React  
-**Testing**: Jest + React Testing Library  
-**Bundler**: Manual Webpack (no CRA)
+🧪 Unit-tested using Jest & React Testing Library
 
----
+🌐 Mock backend powered by MirageJS
 
-## 🛠️ Getting Started
+📦 Custom Webpack configuration (No CRA)
 
-```bash
-# Clone the repo
+⚡ Code splitting via React.lazy()
+
+🧱 Tech Stack
+Category	Tools Used
+Frontend	React, Redux Toolkit, Redux-Saga, Emotion
+Mock API	MirageJS
+Icons	Lucide React
+Testing	Jest, React Testing Library
+Bundler	Manual Webpack (No Create React App)
+
+🛠️ Getting Started
+bash
+Copy
+Edit
+# 1. Clone the repository
 git clone https://github.com/tsionbirhanu/addis-song-manager-webpack.git
-cd addis-song-manager
+cd addis-song-manager-webpack
 
-# Install dependencies
+# 2. Install dependencies
 npm install
 
-# Start development server
+# 3. Start development server
 npm start
-# Open: http://localhost:3000
+# ➜ Open: http://localhost:3000
 
-# Run tests
+# 4. Run unit tests
 npm test
 
-# Build for production
+# 5. Build for production
 npm run build
-```
+📡 Mock API Endpoints
+MirageJS is used to simulate a backend. See implementation in src/mirage/server.js.
 
-📡 REST API Endpoints (Mocked via MirageJS)
 Method	Endpoint	Description
-GET	/api/songs	Fetch all songs
-GET	/api/songs/:id	Fetch a single song
+GET	/api/songs	Get all songs
+GET	/api/songs/:id	Get song by ID
 POST	/api/songs	Add a new song
 PUT	/api/songs/:id	Update a song
 DELETE	/api/songs/:id	Delete a song
 
-⚠️ Note: All endpoints are mocked using MirageJS (see src/mirage/server.js)
+⚙️ Webpack Configuration Highlights
+This project uses a manual Webpack setup for full control.
 
-⚙️ Webpack Configuration
-This project uses a custom Webpack config (not CRA) for full control.
+Babel for JSX & TypeScript
 
-🧩 Key Features:
+CSS & image loaders
 
-Babel for JSX + TypeScript
-
-CSS + image loaders
-
-dotenv-webpack for env variables
+dotenv support for env variables
 
 HMR (Hot Module Replacement)
 
-Code splitting with lazy loading
+Code splitting with React.lazy
 
 Production optimization via TerserPlugin
 
-✅ Verified:
+🧠 AI Usage Transparency
+✅ Used ChatGPT & GitHub Copilot for:
 
-npm start runs the app
+Boilerplate generation (Redux, Webpack)
 
-Live reload works
+Filtering logic, Webpack tweaks
 
-npm run build creates production build
+Regex & helper utilities
 
-dist/index.html works independently
+✅ Manually tested & verified:
 
-Bundle inspected for correct asset loading
+All code reviewed and understood
 
-🤖 AI Usage & Code Verification
-✅ Tools Used:
+Used console, DevTools, and test cases
 
-ChatGPT & GitHub Copilot for:
-
-Generating boilerplate (Redux setup, Webpack configuration)
-
-Regex, filtering logic
-
-Debug help & refactoring
-
-🧠 My Work:
-
-Read, understood, and modified every AI-assisted code
-
-Manually tested in browser
-
-Used React DevTools + console.log for debugging
-
-Wrote unit tests for components & reducers
+Debugged with Redux DevTools
 
 🧪 Testing Strategy
-📁 Location: src/__tests__/components/
+Location: src/__tests__/components/
 
-🧬 Covers:
+✅ Component rendering
 
-✅ Rendering
+✅ Form inputs & interactions
 
-✅ User interactions (input, clicks)
+✅ Redux store state flow
 
-✅ Redux logic
-
-🧪 Run:
+✅ Integration with MirageJS
 
 bash
 Copy
 Edit
 npm test
-🛠 Verified with:
-
-Manual browser tests
-
-API mocking check (MirageJS)
-
-Redux DevTools to confirm state flow
-
 🔗 Live Demo
-✅ Visit the live deployed site here:
-👉 https://addis-song-manager-webpack.vercel.app/
+👉 Visit the deployed app:
+https://addis-song-manager-webpack.vercel.app/
 
-✨ Created By
+👤 Author
 Tsion Birhanu
 📧 tsionbirhanu08@gmail.com
-
