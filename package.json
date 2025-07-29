@@ -2,12 +2,15 @@
   "name": "addis-song-manager",
   "version": "1.0.0",
   "main": "index.js",
+  
   "scripts": {
-    "start": "webpack serve --mode development",
-    "build": "webpack --mode production",
-    "test": "jest",
-    "test:watch": "jest --watch"
-  },
+  "dev": "webpack serve --mode development",        
+  "start": "serve dist",                            
+  "build": "webpack --mode production",
+  "test": "jest",
+  "test:watch": "jest --watch"
+},
+
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -46,6 +49,7 @@
     "html-webpack-plugin": "^5.6.3",
     "jest": "^30.0.4",
     "jest-environment-jsdom": "^30.0.4",
+    "serve": "^14.2.4",
     "style-loader": "^3.3.4",
     "url-loader": "^4.1.1",
     "webpack": "^5.100.2",
