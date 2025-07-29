@@ -1,4 +1,3 @@
-
 # 🎵 Addis Song Manager
 
 > A full-stack React app to manage songs — built for the **Addis Software Internship Test Project**.
@@ -24,10 +23,10 @@ It includes powerful CRUD features, global state, dynamic theming, and a fully *
 
 ## 📦 Tech Stack
 
-**Frontend**: React, Redux Toolkit, Redux-Saga, Emotion, Framer Motion
-**Backend**: MirageJS (Mock Server)
-**Icons**: Lucide React
-**Testing**: Jest + React Testing Library
+**Frontend**: React, Redux Toolkit, Redux-Saga, Emotion, Framer Motion  
+**Backend**: MirageJS (Mock Server)  
+**Icons**: Lucide React  
+**Testing**: Jest + React Testing Library  
 **Bundler**: Manual Webpack (no CRA)
 
 ---
@@ -51,107 +50,96 @@ npm test
 
 # Build for production
 npm run build
-```
+📡 REST API Endpoints (Mocked via MirageJS)
+Method	Endpoint	Description
+GET	/api/songs	Fetch all songs
+GET	/api/songs/:id	Fetch a single song
+POST	/api/songs	Add a new song
+PUT	/api/songs/:id	Update a song
+DELETE	/api/songs/:id	Delete a song
 
----
+⚠️ Note: All endpoints are mocked using MirageJS (see src/mirage/server.js)
 
-## 📡 REST API Endpoints (Mocked via MirageJS)
-
-| Method | Endpoint        | Description         |
-| ------ | --------------- | ------------------- |
-| GET    | /api/songs      | Fetch all songs     |
-| GET    | /api/songs/:id  | Fetch a single song |
-| POST   | /api/songs      | Add a new song      |
-| PUT    | /api/songs/:id  | Update a song       |
-| DELETE | /api/songs/:id  | Delete a song       |
-
-⚠️ **Note**: All endpoints are mocked using MirageJS (see `src/mirage/server.js`)
-
----
-
-## ⚙️ Webpack Configuration
-
-This project uses a **custom Webpack config** (not CRA) for full control.
+⚙️ Webpack Configuration
+This project uses a custom Webpack config (not CRA) for full control.
 
 🧩 Key Features:
 
-* Babel for JSX + TypeScript
-* CSS + image loaders
-* dotenv-webpack for env variables
-* HMR (Hot Module Replacement)
-* Code splitting with lazy loading
-* Production optimization via **TerserPlugin**
+Babel for JSX + TypeScript
 
-✅ **Verified**:
+CSS + image loaders
 
-* `npm start` runs the app
-* Live reload works
-* `npm run build` creates production build
-* `dist/index.html` works independently
-* Bundle inspected for correct asset loading
+dotenv-webpack for env variables
 
----
+HMR (Hot Module Replacement)
 
-## 🤖 AI Usage & Code Verification
+Code splitting with lazy loading
 
-✅ **Tools Used**:
+Production optimization via TerserPlugin
 
-* ChatGPT & GitHub Copilot for:
+✅ Verified:
 
-  * Generating boilerplate (Redux setup, Webpack configuration)
-  * Regex, filtering logic
-  * Debug help & refactoring
+npm start runs the app
 
-🧠 **My Work**:
+Live reload works
 
-* Read, understood, and **modified every AI-assisted code**
-* Manually tested in browser
-* Used React DevTools + `console.log` for debugging
-* Wrote unit tests for components & reducers
+npm run build creates production build
 
----
+dist/index.html works independently
 
-## 🧪 Testing Strategy
+Bundle inspected for correct asset loading
 
-📁 Location: `src/__tests__/components/`
+🤖 AI Usage & Code Verification
+✅ Tools Used:
+
+ChatGPT & GitHub Copilot for:
+
+Generating boilerplate (Redux setup, Webpack configuration)
+
+Regex, filtering logic
+
+Debug help & refactoring
+
+🧠 My Work:
+
+Read, understood, and modified every AI-assisted code
+
+Manually tested in browser
+
+Used React DevTools + console.log for debugging
+
+Wrote unit tests for components & reducers
+
+🧪 Testing Strategy
+📁 Location: src/__tests__/components/
 
 🧬 Covers:
 
-* ✅ Rendering
-* ✅ User interactions (input, clicks)
-* ✅ Redux logic
+✅ Rendering
+
+✅ User interactions (input, clicks)
+
+✅ Redux logic
 
 🧪 Run:
 
-```bash
+bash
+Copy
+Edit
 npm test
-```
-
 🛠 Verified with:
 
-* Manual browser tests
-* API mocking check (MirageJS)
-* Redux DevTools to confirm state flow
+Manual browser tests
 
----
+API mocking check (MirageJS)
 
-## 📸 Preview Screenshots
+Redux DevTools to confirm state flow
 
-> Vercel deployment is still being finalized. Here's a **live preview** of the working app:
+🔗 Live Demo
+✅ Visit the live deployed site here:
+👉 https://addis-song-manager-webpack.vercel.app/
 
-<img width="100%" alt="Preview 1" src="https://github.com/user-attachments/assets/d0d9c0ed-7191-4f2a-8a20-d689b134592c" />
-<br />
-<img width="100%" alt="Preview 2" src="https://github.com/user-attachments/assets/92601f50-dd94-4cba-8b04-5e9bfb25ef8d" />
-<br />
-<img width="100%" alt="Preview 3" src="https://github.com/user-attachments/assets/6b20a7fc-af4b-437c-bb1c-e54bfa16d072" />
-<br />
-<img width="100%" alt="Preview 4" src="https://github.com/user-attachments/assets/5807def8-e392-4d3c-b3ed-d29b713de130" />
+✨ Created By
+Tsion Birhanu
+📧 tsionbirhanu08@gmail.com
 
----
-
-## 👤 Author
-
-**Tsion Birhanu**
-📧 [tsionbirhanu08@gmail.com](mailto:tsionbirhanu08@gmail.com)
-
----
