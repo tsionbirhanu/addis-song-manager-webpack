@@ -50,6 +50,8 @@ npm test
 
 # Build for production
 npm run build
+```
+
 📡 REST API Endpoints (Mocked via MirageJS)
 Method	Endpoint	Description
 GET	/api/songs	Fetch all songs
