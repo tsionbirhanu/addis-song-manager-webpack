@@ -1,159 +1,157 @@
-# Addis Song Manager 🎵
 
-A full-stack React application for managing songs, developed as part of the **Addis Software Internship Test Project**. It features CRUD operations, global state management, dynamic theming, and a fully custom Webpack setup (no Create React App).
+# 🎵 Addis Song Manager
+
+> A full-stack React app to manage songs — built for the **Addis Software Internship Test Project**.
+
+It includes powerful CRUD features, global state, dynamic theming, and a fully **custom Webpack setup** (no CRA). 
 
 ---
 
 ## 🚀 Features
 
-- ✅ Paginated list of songs (title, artist, album, year)
-- ✅ Add, edit, and delete songs (CRUD)
-- ✅ Search and filter functionality
-- ✅ Responsive design (mobile-friendly)
-- ✅ State management using Redux Toolkit + Redux-Saga
-- ✅ Styled with Emotion (CSS-in-JS)
-- ✅ Mock backend powered by MirageJS
-- ✅ Manual Webpack setup (no CRA)
-- ✅ Component and logic testing using Jest & React Testing Library
+* ✅ Paginated list of songs *(title, artist, album, year, genre, duration)*
+* ✅ Add, Edit, Delete songs *(CRUD)*
+* ✅ Search & Filter functionality
+* ✅ Fully responsive UI
+* ✅ State management with **Redux Toolkit + Redux-Saga**
+* ✅ Styled using **Emotion (CSS-in-JS)**
+* ✅ **Mock Backend** with MirageJS
+* ✅ Manual Webpack Setup *(no Create React App)*
+* ✅ Component + Logic Testing using **Jest & React Testing Library**
+* ✅ Code-splitting with `React.lazy()`
 
 ---
 
-## 🧰 Technologies Used
+## 📦 Tech Stack
 
-| Technology             | Purpose                            |
-|------------------------|------------------------------------|
-| **ReactJS**            | UI development                     |
-| **Redux Toolkit**      | State management                   |
-| **Redux-Saga**         | Handling side effects              |
-| **Emotion**            | Component-level styling            |
-| **MirageJS**           | In-browser mock API server         |
-| **Webpack**            | Module bundling (custom setup)     |
-| **Jest**               | Unit testing                       |
-| **React Testing Library** | Component testing              |
+**Frontend**: React, Redux Toolkit, Redux-Saga, Emotion, Framer Motion
+**Backend**: MirageJS (Mock Server)
+**Icons**: Lucide React
+**Testing**: Jest + React Testing Library
+**Bundler**: Manual Webpack (no CRA)
 
 ---
 
-## 📦 Setup Instructions
+## 🛠️ Getting Started
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/tsionbirhanu/addis-song-manager.git
-   cd addis-song-manager
-Install dependencies
+```bash
+# Clone the repo
+git clone https://github.com/tsionbirhanu/addis-song-manager-webpack.git
+cd addis-song-manager/addis-song-manager
 
-bash
-Copy
-Edit
+# Install dependencies
 npm install
-Start the development server
 
-bash
-Copy
-Edit
+# Start development server
 npm start
-Open http://localhost:3000 in your browser.
+# Open: http://localhost:3000
 
-Run tests
-
-bash
-Copy
-Edit
+# Run tests
 npm test
-🔌 API Endpoints (Mocked with MirageJS)
-Method	Endpoint	Description
 
-GET	/api/songs	Fetch all songs (paginated)
+# Build for production
+npm run build
+```
 
-GET	/api/songs/:id	Get a specific song by ID
+---
 
-POST	/api/songs	Create a new song
+## 📡 REST API Endpoints (Mocked via MirageJS)
 
-PUT	/api/songs/:id	Update song details
+| Method | Endpoint        | Description         |
+| ------ | --------------- | ------------------- |
+| GET    | /api/songs      | Fetch all songs     |
+| GET    | /api/songs/:id  | Fetch a single song |
+| POST   | /api/songs      | Add a new song      |
+| PUT    | /api/songs/:id  | Update a song       |
+| DELETE | /api/songs/:id  | Delete a song       |
 
-DELETE	/api/songs/:id	Delete a song
+⚠️ **Note**: All endpoints are mocked using MirageJS (see `src/mirage/server.js`)
 
- ## ⚙️ Webpack Configuration (No CRA)
+---
 
-This project is built without Create React App and uses a manual Webpack setup for complete control over the build process.
+## ⚙️ Webpack Configuration
 
-## 🔧 Key Webpack Features
+This project uses a **custom Webpack config** (not CRA) for full control.
 
-Entry Point: src/index.tsx
+🧩 Key Features:
 
-Output: dist folder with hashed bundle
+* Babel for JSX + TypeScript
+* CSS + image loaders
+* dotenv-webpack for env variables
+* HMR (Hot Module Replacement)
+* Code splitting with lazy loading
+* Production optimization via **TerserPlugin**
 
-Loaders:
+✅ **Verified**:
 
-Babel Loader: Transpiles .tsx and .jsx files
+* `npm start` runs the app
+* Live reload works
+* `npm run build` creates production build
+* `dist/index.html` works independently
+* Bundle inspected for correct asset loading
 
-CSS Loader & Style Loader: Handles CSS imports
-
-File Loader: For images, fonts, and static assets
-
-DevServer: Serves app at localhost:3000, supports hot reload
-
-Environment Variables: Handled via dotenv-webpack
-
-Extensions: Supports .ts, .tsx, .js, .jsx
-
-## 🧪 How I Verified the Webpack Config
-
-Ran npm start and confirmed the app builds and runs correctly
-
-Verified dynamic reloading works during development
-
-Built the app with npm run build and tested dist/index.html
-
-Inspected bundled files for correct asset inclusion
+---
 
 ## 🤖 AI Usage & Code Verification
 
-✅ Tools Used
-ChatGPT and GitHub Copilot were used for:
+✅ **Tools Used**:
 
-Boilerplate generation (Redux store, Webpack config)
+* ChatGPT & GitHub Copilot for:
 
-Debugging assistance
+  * Generating boilerplate (Redux setup, Webpack configuration)
+  * Regex, filtering logic
+  * Debug help & refactoring
 
-Writing regex and filtering logic
+🧠 **My Work**:
 
-Refactoring suggestions
+* Read, understood, and **modified every AI-assisted code**
+* Manually tested in browser
+* Used React DevTools + `console.log` for debugging
+* Wrote unit tests for components & reducers
 
-## 🧠 What I Did Myself
-
-💡 Every line of code was read, understood, and adjusted by me before submission.
-
-Modified and customized all AI-generated snippets
-
-Verified all logic by manual testing in the browser
-
-Used console.log debugging and React DevTools
-
-Wrote and ran unit tests for components and reducers
+---
 
 ## 🧪 Testing Strategy
 
-Tests are located in:
+📁 Location: `src/__tests__/components/`
 
-bash
-Copy
-Edit
-src/__tests__/components/
-To run tests:
+🧬 Covers:
 
-bash
-Copy
-Edit
+* ✅ Rendering
+* ✅ User interactions (input, clicks)
+* ✅ Redux logic
+
+🧪 Run:
+
+```bash
 npm test
-Test coverage includes:
+```
 
-Component rendering and behavior
+🛠 Verified with:
 
-Redux actions and reducers
+* Manual browser tests
+* API mocking check (MirageJS)
+* Redux DevTools to confirm state flow
 
-Basic integration flows (e.g., form submission)
+---
+
+## 📸 Preview Screenshots
+
+> Vercel deployment is still being finalized. Here's a **live preview** of the working app:
+
+<img width="100%" alt="Preview 1" src="https://github.com/user-attachments/assets/d0d9c0ed-7191-4f2a-8a20-d689b134592c" />
+<br />
+<img width="100%" alt="Preview 2" src="https://github.com/user-attachments/assets/92601f50-dd94-4cba-8b04-5e9bfb25ef8d" />
+<br />
+<img width="100%" alt="Preview 3" src="https://github.com/user-attachments/assets/6b20a7fc-af4b-437c-bb1c-e54bfa16d072" />
+<br />
+<img width="100%" alt="Preview 4" src="https://github.com/user-attachments/assets/5807def8-e392-4d3c-b3ed-d29b713de130" />
+
+---
 
 ## 👤 Author
 
-Tsion Birhanu
-Frontend Developer | Software Engineering Student
+**Tsion Birhanu**
+📧 [tsionbirhanu08@gmail.com](mailto:tsionbirhanu08@gmail.com)
+
+---
