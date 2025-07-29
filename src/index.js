@@ -9,7 +9,9 @@ import { makeServer } from "./mirage/server";
 import "./styles/global.css";
 
 if (process.env.NODE_ENV === "development") {
-  makeServer();
+  console.log("Starting MirageJS server in development mode...");
+  makeServer({ environment: "development" });
+  console.log("MirageJS server started successfully");
 }
 
 const container = document.getElementById("root");

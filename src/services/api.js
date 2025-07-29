@@ -27,7 +27,12 @@ export const fetchSongs = async (params = {}) => {
   if (params.limit) searchParams.append("limit", params.limit)
   if (params.search) searchParams.append("search", params.search)
 
-  const response = await fetch(`${API_BASE_URL}/songs?${searchParams}`)
+  const url = `${API_BASE_URL}/songs?${searchParams}`
+  console.log("Fetching songs from:", url)
+  
+  const response = await fetch(url)
+  console.log("Response status:", response.status)
+  
   return handleResponse(response)
 }
 

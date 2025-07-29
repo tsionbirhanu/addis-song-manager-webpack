@@ -4,10 +4,11 @@ const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   entry: "./src/index.js",
-  mode: "development",
+  mode: process.env.NODE_ENV || "development",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
+    publicPath: '/',
     clean: true,
   },
   resolve: {
@@ -40,7 +41,7 @@ module.exports = {
   ],
   devServer: {
     static: {
-      directory: path.join(__dirname, "dist"),
+      directory: path.join(__dirname, "public"),
     },
     compress: true,
     port: 3000,
