@@ -8,11 +8,10 @@ import App from "./App";
 import { makeServer } from "./mirage/server";
 import "./styles/global.css";
 
-if (process.env.NODE_ENV === "development") {
-  console.log("Starting MirageJS server in development mode...");
-  makeServer({ environment: "development" });
-  console.log("MirageJS server started successfully");
-}
+// Start MirageJS server in both development and production
+console.log("Starting MirageJS server...");
+makeServer({ environment: "development" });
+console.log("MirageJS server started successfully");
 
 const container = document.getElementById("root");
 const root = createRoot(container);
