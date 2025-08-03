@@ -35,6 +35,7 @@ It includes powerful CRUD features, global state, dynamic theming, and a fully *
 ## 🛠️ Getting Started
 
 ```bash
+
 # Clone the repo
 git clone https://github.com/tsionbirhanu/addis-song-manager-webpack.git
 cd addis-song-manager
