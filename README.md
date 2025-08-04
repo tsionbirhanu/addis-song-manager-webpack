@@ -28,7 +28,7 @@ It includes powerful CRUD features, global state, dynamic theming, and a fully *
 **Backend**: MirageJS (Mock Server)
 **Icons**: Lucide React
 **Testing**: Jest + React Testing Library
-**Bundler**: Manual Webpack (no CRA)
+**Bundler**: Manual Webpack
 
 ---
 
